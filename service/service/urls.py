@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from cargo.views import CargoListAPI
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', CargoListAPI.as_view(), name='cargo_list'),
 ]
