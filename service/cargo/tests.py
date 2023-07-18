@@ -34,11 +34,9 @@ class CargoListAPITest(TestCase):
         url = reverse('cargo_list')
         data = {'date': '2022-01-03', 'cargo_type': 'Груз 4', 'rate': 40.0, 'declared_value': 400.0}
         response = self.client.post(url, data)
-
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(CargoModel.objects.count(), 4)
         cargo = CargoModel.objects.last()
-        print(cargo)
         serializer = CargoSerializer(cargo)
         self.assertEqual(response.data, serializer.data)
 
