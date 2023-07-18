@@ -1,7 +1,7 @@
 # insurance_api
 
 Сервис по расчёту стоимости страхования в зависимости от типа груза и объявленной стоимости.\
-Реализован на Django REST framework.
+Реализован на Django REST Framework.
 
 # RUN
 Клонирование репозитория git clone https://github.com/Flowmikro/insurance_api.git\
